@@ -1,0 +1,3 @@
+[mcp_servers.bloque]
+url = "https://mcp.bloque.run/mcp"
+bearer_token_env_var = "BLOQUE_API_KEY"
