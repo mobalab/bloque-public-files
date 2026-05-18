@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Page Visual Review"
+  short_description: "Inspect rendered pages for visual and contrast issues"
+  default_prompt: "Use $web-page-visual-review to open this page, capture a screenshot, and report visual or contrast issues."
