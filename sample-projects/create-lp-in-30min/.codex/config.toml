@@ -1,3 +1,27 @@
 [mcp_servers.bloque]
 url = "https://mcp.bloque.run/mcp"
 bearer_token_env_var = "BLOQUE_API_KEY"
+
+[mcp_servers.bloque.tools.filesystem__create_directory]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__directory_tree]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__get_file_info]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_allowed_directories]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_directory]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_directory_with_sizes]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.bloque_get_download_url]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.bloque_get_upload_url]
+approval_mode = "approve"
