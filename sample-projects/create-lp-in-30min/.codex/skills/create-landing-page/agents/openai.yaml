@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Landing Page"
+  short_description: "Build and review landing pages"
+  default_prompt: "Use $create-landing-page to create a landing page for my product."
