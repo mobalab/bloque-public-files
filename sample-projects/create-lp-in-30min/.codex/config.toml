@@ -1,0 +1,57 @@
+[mcp_servers.bloque]
+url = "https://mcp.bloque.run/mcp"
+bearer_token_env_var = "BLOQUE_API_KEY"
+
+[mcp_servers.bloque.tools.filesystem__create_directory]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__directory_tree]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__get_file_info]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_allowed_directories]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_directory]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.filesystem__list_directory_with_sizes]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.bloque_get_download_url]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.bloque_get_upload_url]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_navigate]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_evaluate]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_console_messages]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_snapshot]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_resize]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.playwright__browser_take_screenshot]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.lazyweb__lazyweb_search]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.netlify__netlify-project-services-reader]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.netlify__netlify-deploy-services-updater]
+approval_mode = "approve"
+
+[mcp_servers.bloque.tools.netlify__netlify-deploy-services-reader]
+approval_mode = "approve"

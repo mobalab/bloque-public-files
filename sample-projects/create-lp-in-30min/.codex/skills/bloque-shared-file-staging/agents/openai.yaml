@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bloque File Staging"
+  short_description: "Transfer files to and from Bloque /shared"
+  default_prompt: "Use $bloque-shared-file-staging to upload local files into Bloque's /shared directory or download /shared files with Bloque's presigned URL tools."
