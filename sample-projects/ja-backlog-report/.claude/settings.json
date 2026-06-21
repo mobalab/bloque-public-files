@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__bloque__backlog__get_issue",
+      "mcp__bloque__backlog__get_issues",
+      "mcp__bloque__backlog__get_issue_comments",
+      "mcp__bloque__slack__slack_send_message"
+    ]
+  }
+}
