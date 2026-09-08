@@ -21,15 +21,11 @@ your WordPress site's `wp-content/mu-plugins/`. This makes the two Abilities
 `myplugin/list-flamingo-messages` and `myplugin/mark-flamingo-message-processed`
 available over MCP.
 
-### Get your Slack and Zoho Mail credentials
+### Get your Slack credentials
 
 Follow the doc below to create the Slack app Bloque will use, and get its
 client ID and client secret.
 [Create a Slack app | Bloque Documentation](https://docs.bloque.run/docs/integrations/create-slack-app)
-
-For Zoho Mail, install "Zoho Mail" from Bloque's "Search" page and follow
-the connection flow it presents. Note down the Account ID of the mailbox
-you'll use for job-application draft replies.
 
 ### Set up the MCP servers on Bloque
 
