@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bloque": {
+      "type": "http",
+      "url": "https://mcp.bloque.run/mcp",
+      "headers": {
+        "Authorization": "Bearer ${BLOQUE_API_KEY}"
+      }
+    }
+  }
+}
