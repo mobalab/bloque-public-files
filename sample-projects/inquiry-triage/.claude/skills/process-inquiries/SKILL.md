@@ -1,13 +1,13 @@
 ---
 name: process-inquiries
-description: Fetch unprocessed contact-form inquiries from the mobalab WordPress site (stored in Flamingo via Contact Form 7), classify each one, take the right action (notify Slack, draft a reply email, or ignore), and mark it processed so it's never handled twice. Run this when the user asks to process/check/triage the inquiries or contact form submissions.
+description: Fetch unprocessed contact-form inquiries from the Example Corp. WordPress site (stored in Flamingo via Contact Form 7), classify each one, take the right action (notify Slack, draft a reply email, or ignore), and mark it processed so it's never handled twice. Run this when the user asks to process/check/triage the inquiries or contact form submissions.
 ---
 
-Triage the newest unprocessed inquiries from the mobalab contact form and act on each one so nothing sits unread and nothing gets handled twice.
+Triage the newest unprocessed inquiries from the Example Corp. contact form and act on each one so nothing sits unread and nothing gets handled twice.
 
 ## Why this matters
 
-The contact form on blog.mobalab.net gets a mix of genuine business inquiries, job applications, and a lot of unsolicited sales pitches (see Step 2). The goal is to make sure real opportunities (service inquiries, job applicants) reach a human fast, while routine noise (staffing sales pitches, generic outreach) doesn't need anyone's attention. When in doubt about a classification, prefer routing to a human (category 6) over silently ignoring — ignoring is only for the categories explicitly called out for it below.
+The contact form on blog.example.com gets a mix of genuine business inquiries, job applications, and a lot of unsolicited sales pitches (see Step 2). The goal is to make sure real opportunities (service inquiries, job applicants) reach a human fast, while routine noise (staffing sales pitches, generic outreach) doesn't need anyone's attention. When in doubt about a classification, prefer routing to a human (category 6) over silently ignoring — ignoring is only for the categories explicitly called out for it below.
 
 Classification is a judgment call, and judgment calls are sometimes wrong. Rather than let a misjudged "ignore" vanish for good, the borderline ignore categories (3 without a named buyer, 4, and 5-when-not-useful) get bundled into one digest message to marketing at the end of the run, so a human gets a cheap second look without every ignored inquiry needing its own interruption.
 
@@ -24,9 +24,9 @@ IDs and account details that might change over time live here, and only here —
 | `MARKETING_SLACK_CHANNEL` | `C0AB12CDE34` | Slack channel for genuine business inquiries and useful sales pitches |
 | `ADMIN_DM_CHANNEL` | `D0AB12CDE` | Admin's Slack DM channel, for job applications and anything needing a human's judgment |
 | `JOBS_ZOHO_ACCOUNT_ID` | `1234567000000001234` | Zoho Mail account ID for the jobs mailbox |
-| `JOBS_FROM_ADDRESS` | `jobs@example.com` | From-address for job-application draft replies (mobalab's recruiting team) |
+| `JOBS_FROM_ADDRESS` | `jobs@example.com` | From-address for job-application draft replies (Example Corp.'s recruiting team) |
 
-**Company context** (for judging "is this about our service?"): mobalab is a company doing contract development / development-project handovers, and business-process improvement using MCP/AI.
+**Company context** (for judging "is this about our service?"): Example Corp. is a company doing contract development / development-project handovers, and business-process improvement using MCP/AI.
 
 ---
 
@@ -61,11 +61,11 @@ For every inquiry that passes the age check, read `subject` and `fields.your-mes
 
 | # | Category | Signal | Action |
 |---|----------|--------|--------|
-| 1 | Inquiry about our service | Asking about mobalab's own dev/handover/MCP·AI services, pricing, or wanting to work with us | → Slack to marketing |
-| 2 | Job application | Applying for or asking about a position at mobalab | → Draft email + Slack DM to admin |
+| 1 | Inquiry about our service | Asking about Example Corp.'s own dev/handover/MCP·AI services, pricing, or wanting to work with us | → Slack to marketing |
+| 2 | Job application | Applying for or asking about a position at Example Corp. | → Draft email + Slack DM to admin |
 | 3 | Potential M&A offer | Business transfer / acquisition pitch (often vague, "business transfer", "M&A", buyer unnamed) | **Ignore**, unless they name the actual prospective buyer/acquirer — then treat it like category 6 (DM admin) and flag it as M&A in the message, since a named buyer makes it worth a human's attention |
-| 4 | Sale of staffing/outsourcing service | Offering to supply engineers/staff or outsourced dev work to mobalab (mobalab as the *client*, not the provider) | **Ignore** |
-| 5 | Sale/proposal of other service | Any other unsolicited sales pitch (marketing tools, HR/skill platforms, consulting, etc.) | → Slack to marketing, **only if** you judge it could plausibly help grow mobalab's sales or business; otherwise ignore |
+| 4 | Sale of staffing/outsourcing service | Offering to supply engineers/staff or outsourced dev work to Example Corp. (Example Corp. as the *client*, not the provider) | **Ignore** |
+| 5 | Sale/proposal of other service | Any other unsolicited sales pitch (marketing tools, HR/skill platforms, consulting, etc.) | → Slack to marketing, **only if** you judge it could plausibly help grow Example Corp.'s sales or business; otherwise ignore |
 | 6 | Other | Doesn't fit cleanly above, but plausibly a real message from a real person — you're just unsure how to route it | → Slack DM to admin |
 | 7 | Junk / bot noise | Random characters, gibberish, or no discernible language/intent in subject and message — clearly an automated probe, not a real person | **Ignore** |
 
@@ -106,11 +106,11 @@ Call `slack_send_message` with `channel_id: {MARKETING_SLACK_CHANNEL}` and a mes
      ```
      Dear <name>,
 
-     Thank you very much for your interest in a position at mobalab. We've
+     Thank you very much for your interest in a position at Example Corp. We've
      received your application and will follow up with you after reviewing
      it. Thank you for your patience in the meantime.
 
-     mobalab Recruiting Team
+     Example Corp. Recruiting Team
      ```
    - `body.mailFormat`: `"plaintext"`
 2. Call `slack_send_message` with `channel_id: {ADMIN_DM_CHANNEL}` and a message telling admin a draft is waiting:
