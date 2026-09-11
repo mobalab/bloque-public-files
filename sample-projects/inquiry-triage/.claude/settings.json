@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__bloque__wordpress__mcp-adapter-execute-ability",
+      "mcp__bloque__slack__slack_send_message",
+      "mcp__bloque__zoho-mail__ZohoMail_sendEmail"
+    ]
+  }
+}
