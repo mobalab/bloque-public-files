@@ -30,7 +30,7 @@ client ID and client secret.
 ### Set up the MCP servers on Bloque
 
 1. Sign up for [Bloque](https://bloque.run) if you haven't already
-2. Go to the [sample Hub](<TODO: create a Hub on bloque.run bundling WordPress, Slack, and Zoho Mail, and paste the link here>) and click "Install Hub"
+2. Go to the [sample Hub](https://bloque.run/to/demo/hub/98bac5bd-a5e5-416e-95af-38d6f1480fdc) and click "Install Hub"
 3. On the [MCP servers screen](https://bloque.run/mcp-servers), open each server's "Edit" and fill in what's needed under "Configuration":
     * WordPress: the Application Password (and anything else) from the doc above
     * Slack: your Slack app's "Client ID" and "Client Secret"
