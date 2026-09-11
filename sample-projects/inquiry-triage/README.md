@@ -32,9 +32,9 @@ client ID and client secret.
 1. Sign up for [Bloque](https://bloque.run) if you haven't already
 2. Go to the [sample Hub](https://bloque.run/to/demo/hub/98bac5bd-a5e5-416e-95af-38d6f1480fdc) and click "Install Hub"
 3. On the [MCP servers screen](https://bloque.run/mcp-servers), open each server's "Edit" and fill in what's needed under "Configuration":
-    * WordPress: the Application Password (and anything else) from the doc above
+    * WordPress: your MCP server's URL and the "Authorization" header value (base64-encoded `<username>:<app-password>`; see the doc above)
     * Slack: your Slack app's "Client ID" and "Client Secret"
-    * Zoho Mail: the credentials from the connection flow
+    * Zoho Mail: your MCP server's URL
 4. Go to [API Keys](https://bloque.run/api-keys) and create/save one
 
 ### Project directory
