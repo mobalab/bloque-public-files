@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__bloque__freee__freee_api_get",
+      "mcp__bloque__backlog__get_issue",
+      "mcp__bloque__notion__notion-fetch",
+      "mcp__bloque__notion__notion-query-data-sources",
+      "mcp__bloque__notion__notion-create-pages",
+      "mcp__bloque__notion__notion-update-page",
+      "Bash(python3 .claude/skills/sync-quotes-to-notion/scripts/parse_quotes.py *)",
+      "Bash(python3 .claude/skills/sync-quotes-to-notion/scripts/plan_sync.py *)"
+    ]
+  }
+}
